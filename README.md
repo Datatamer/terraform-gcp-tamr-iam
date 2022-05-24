@@ -10,9 +10,9 @@ This modules creates:
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| terraform | >= 0.12 |
+| Name | Version  |
+|------|----------|
+| terraform | >= 1.0.0 |
 
 ## Providers
 
