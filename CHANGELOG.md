@@ -1,5 +1,8 @@
 # GCP Tamr IAM module
 
+## v0.1.3 - May 24th 2022
+* Fix typo for resource field (from "members" to "member")
+
 ## v0.1.2 - January 24th 2022
 * Add missing iam.serviceAccountUser role needed to run Tamr jobs
 
