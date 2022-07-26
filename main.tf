@@ -91,3 +91,27 @@ resource "google_project_iam_member" "bq_user" {
   project = var.project_id
   member  = local.users[count.index]
 }
+
+# iam
+// is a enabled_cloudsql_perms variable needed?
+// use local users or have a new var for specifically cloudsql users?
+resource "google_project_iam_member" "cloud_sql_viewer" {
+  count   = length(local.users)
+  project = var.project_id
+  role    = "roles/cloudsql.viewer"
+  member  = local.users[count.index]
+}
+
+resource "google_project_iam_member" "cloud_sql_client" {
+  count   = length(local.users)
+  project = var.project_id
+  role    = "roles/cloudsql.client"
+  member  = local.users[count.index]
+}
+
+resource "google_project_iam_member" "cloud_sql_admin" {
+  count   = length(local.users)
+  project = var.project_id
+  role    = "roles/cloudsql.admin"
+  member  = local.users[count.index]
+}
